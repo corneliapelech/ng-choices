@@ -1,0 +1,16 @@
+<ng-container
+  *ngIf="statsService.isGameOver; then dead; else inGame">
+</ng-container>
+
+<ng-template #inGame>
+  <div>
+    <a routerLink="/home">QUIT</a>
+    <app-stats></app-stats>
+    <app-dummy-buttons></app-dummy-buttons>
+  </div>
+</ng-template>
+<ng-template #dead>
+  <div>
+    <app-game-over></app-game-over>
+  </div>
+</ng-template>
