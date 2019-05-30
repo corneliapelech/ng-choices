@@ -4,11 +4,11 @@
 
 <ng-template #inGame>
   <div>
-    <a routerLink="/home">QUIT</a>
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#quitModal" (click)="quit()">X</button>
     <app-stats></app-stats>
     <app-dummy-buttons></app-dummy-buttons>
   </div>
-</ng-template>
+  </ng-template>
 <ng-template #dead>
   <div>
     <app-game-over></app-game-over>
