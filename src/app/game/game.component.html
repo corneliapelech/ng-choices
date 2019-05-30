@@ -1,15 +1,22 @@
 <ng-container
-  *ngIf="statsService.isGameOver; then dead; else inGame">
+  *ngIf="statsService.isGameOver; then gameOver; else inGame">
 </ng-container>
 
 <ng-template #inGame>
-  <div>
-    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#quitModal" (click)="quit()">X</button>
-    <app-stats></app-stats>
-    <app-dummy-buttons></app-dummy-buttons>
+  <div class="row">
+    <div class="d-flex flex-row-reverse align-items-start col-12">
+      <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#quitModal" (click)="quit()">X</button>
+    </div>
+    <div class="d-flex justify-content-center mb-4 col-12">
+      <app-stats class="mt-2 col-12"></app-stats>
+    </div>
+    <div class="d-flex align-items-stretch col-12">
+      <app-dummy-buttons></app-dummy-buttons>
+    </div>
   </div>
-  </ng-template>
-<ng-template #dead>
+</ng-template>
+
+<ng-template #gameOver>
   <div>
     <app-game-over></app-game-over>
   </div>
