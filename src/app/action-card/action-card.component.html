@@ -1,0 +1,11 @@
+<div class="card text-center bg-dark border-secondary h-100">
+  <img src="{{imgSrc}}" class="card-img-top" alt="{{altText}}" />
+  <div class="card-body d-flex flex-column">
+    <p class="card-title">{{title | uppercase}}</p>
+    <p class="card-text flex-grow-1">{{cardContent}}</p>
+    <div class="d-flex justify-content-between mt-auto">
+      <button class="btn btn-info col-4" (click)="left()">Left</button>
+      <button class="btn btn-info col-4" (click)="right()">Right</button>
+    </div>
+  </div>
+</div>
