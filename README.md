@@ -1,3 +1,4 @@
-# angular-reigns-like-game
+# ng-choices
+## a reigns-like game
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-reigns-like-game)

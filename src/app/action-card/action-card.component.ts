@@ -14,17 +14,23 @@ export class ActionCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.loadCard();
+  }
+
+  loadCard(cardId?: number) {
     this.title = "dummy card title";
     this.cardContent = "Insert card text here that contains a situation-setup and poses a question that can be answered.";
-    this.imgSrc = "../assets/dummy.jpg";
+    this.imgSrc = "../assets/images/cards/dummy.jpg";
     this.altText = "alt text goes here";
   }
 
   left() {
     console.log("hit LEFT");
+    this.loadCard();
   }
 
   right() {
     console.log("hit RIGHT");
+    this.loadCard();
   }
 }
