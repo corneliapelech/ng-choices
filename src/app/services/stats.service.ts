@@ -8,6 +8,7 @@ export class StatsService {
 
   money: number;
   reputation: number;
+  conscience: number;
   isGameOver: boolean;
 
   constructor() {
@@ -19,34 +20,22 @@ export class StatsService {
     this.isGameOver = gameState;
   }
 
-  /* MONEY */
-  earnMoney(amount: number): void {
+  /* STATS */
+  updateMoney(amount: number): void {
     this.money = this.money + amount;
-    if (this.money > 9) {
-      console.log("DEAD - you're too rich");
+    if (this.money > 9 || this.money < 1) {
       this.updateGameState(true);
     }
   }
-  spendMoney(amount: number): void {
-    this.money = this.money - amount;
-    if (this.money < 1) {
-      console.log("DEAD - you're broke");
-      this.updateGameState(true);
-    }
-  }
-
-  /* REPUTATION */
-  gainReputation(amount: number): void {
+  updateReputation(amount: number): void {
     this.reputation = this.reputation + amount;
-    if (this.reputation > 9) {
-      console.log("DEAD - you're adored");
+    if (this.reputation > 9 || this.reputation < 1) {
       this.updateGameState(true);
     }
   }
-  looseReputation(amount: number): void {
-    this.reputation = this.reputation - amount;
-    if (this.reputation < 1) {
-      console.log("DEAD - you're hated");
+  updateConscience(amount: number): void {
+    this.conscience = this.conscience + amount;
+    if (this.conscience > 9 || this.conscience < 1) {
       this.updateGameState(true);
     }
   }

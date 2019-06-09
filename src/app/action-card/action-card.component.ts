@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./action-card.component.scss']
 })
 export class ActionCardComponent implements OnInit {
+  cardId: string;
   title: string;
   cardContent: string;
-  imgSrc: string;
-  altText: string;
+  // imgSrc: string;
+  // altText: string;
+  answerA: string;
+  answerB: string;
 
   constructor() { }
 
@@ -17,20 +20,21 @@ export class ActionCardComponent implements OnInit {
     this.loadCard();
   }
 
-  loadCard(cardId?: number) {
+  loadCard() {
+    this.cardId = "dummy-id";
     this.title = "dummy card title";
     this.cardContent = "Insert card text here that contains a situation-setup and poses a question that can be answered.";
-    this.imgSrc = "../assets/images/cards/dummy.jpg";
-    this.altText = "alt text goes here";
+    this.answerA = "Left";
+    this.answerB = "Right";
   }
 
-  left() {
-    console.log("hit LEFT");
+  chooseA() {
+    console.log("hit LEFT (A)");
     this.loadCard();
   }
 
-  right() {
-    console.log("hit RIGHT");
+  chooseB() {
+    console.log("hit RIGHT (B)");
     this.loadCard();
   }
 }

@@ -32,6 +32,7 @@ export class GameComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.statsService.money = 5;
     this.statsService.reputation = 5;
+    this.statsService.conscience = 5;
   }
 
   ngOnDestroy() {
