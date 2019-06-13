@@ -14,12 +14,13 @@ import { DummyButtonsComponent } from './dummy-buttons/dummy-buttons.component';
 import { GameOverComponent } from './game-over/game-over.component';
 import { FooterComponent } from './footer/footer.component';
 import { ActionCardComponent } from './action-card/action-card.component';
+import { ActionCardService } from './services/action-card.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, NgbModule, AppRoutingModule ],
   declarations: [ AppComponent, StatsComponent, HomeComponent, GameComponent, QuitGame, DummyButtonsComponent, GameOverComponent, FooterComponent, ActionCardComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ StatsService ],
+  providers: [ StatsService, ActionCardService ],
   entryComponents: [QuitGame]
 })
 export class AppModule { }

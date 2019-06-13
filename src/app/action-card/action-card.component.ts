@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ActionCardService } from '../services/action-card.service';
+
 @Component({
   selector: 'app-action-card',
   templateUrl: './action-card.component.html',
@@ -14,7 +16,7 @@ export class ActionCardComponent implements OnInit {
   answerA: string;
   answerB: string;
 
-  constructor() { }
+  constructor(private cardService: ActionCardService) { }
 
   ngOnInit() {
     this.loadCard();
