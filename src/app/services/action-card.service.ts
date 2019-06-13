@@ -12,7 +12,7 @@ export interface IActionCard {
   conclusionA: IConclusion;
   conclusionB: IConclusion;
 }
-interface IConclusion {
+export interface IConclusion {
   money: number;
   reputation: number;
   conscience: number;
@@ -28,34 +28,11 @@ export class ActionCardService {
   cards: IActionCard[] = [];
 
   constructor() {
-    this.cards = cards;
+    this.cards = cards.cards;
   }
 
   getCard(): IActionCard {
-    /*const x = this.cards[Math.floor(Math.random()*this.cards.length)];
-    console.log("card:", x);
-    console.log("cards-length:", this.cards.length);
-    console.log("cards", this.cards);*/
-    return {
-      id: "dummy-id",
-      title: "dummy card title",
-      situation: "Insert card text here that contains a situation-setup",
-      choices: "This poses a question that can be answered.",
-      answerA: "Left",
-      answerB: "Right",
-      conclusionA: {
-        money: -1,
-        reputation: 0,
-        conscience: +1,
-        outcome: "this is what happens after choosing Left"
-      },
-      conclusionB: {
-        money: +1,
-        reputation: 0,
-        conscience: -1,
-        outcome: "this is what happens after choosing Right"
-      }
-    }
+    return this.cards[Math.floor(Math.random()*this.cards.length)];
   }
 
 }

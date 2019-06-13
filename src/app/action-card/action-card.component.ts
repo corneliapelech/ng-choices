@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ActionCardService, IActionCard } from '../services/action-card.service';
+import { ActionCardService, IActionCard, IConclusion } from '../services/action-card.service';
+import { StatsService } from '../services/stats.service'
 
 @Component({
   selector: 'app-action-card',
@@ -9,11 +10,13 @@ import { ActionCardService, IActionCard } from '../services/action-card.service'
 })
 export class ActionCardComponent implements OnInit {
   card: IActionCard;
+  outcome: string;
 
-  constructor(private cardService: ActionCardService) { }
+  constructor(private cardService: ActionCardService, private statsService: StatsService) { }
 
   ngOnInit() {
     this.loadCard();
+    this.outcome = "Intro text?";
   }
 
   loadCard() {
@@ -21,12 +24,18 @@ export class ActionCardComponent implements OnInit {
   }
 
   chooseA() {
-    console.log("hit LEFT (A)");
-    this.loadCard();
+    this.resolveChoice(this.card.conclusionA);
   }
 
   chooseB() {
-    console.log("hit RIGHT (B)");
+    this.resolveChoice(this.card.conclusionB);
+  }
+
+  private resolveChoice(conclusion: IConclusion) {
+    this.statsService.updateMoney(parseInt(conclusion.money));
+    this.statsService.updateReputation(parseInt(conclusion.reputation));
+    this.statsService.updateConscience(parseInt(conclusion.conscience));
+    this.outcome = conclusion.outcome;
     this.loadCard();
   }
 }
