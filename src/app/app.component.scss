@@ -1,6 +1,8 @@
+#main-wrapper{
+  height: 100vh !important;
+  min-width: 450px;
+  max-width: 100vw !important;
+}
 main {
   color: antiquewhite;
-  &.height{
-    height: 100vh !important;
-  }
 }

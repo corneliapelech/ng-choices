@@ -1,3 +1,8 @@
-<main class="container height">
-  <router-outlet></router-outlet>
-</main>
+<div class="container d-flex flex-column" id="main-wrapper">
+  <main class="justify-content-center flex-grow-1">
+    <router-outlet></router-outlet>
+  </main>
+  <div class="justify-content-center">
+    <app-footer class="col-sm-11 col-lg-8"></app-footer>
+  </div>
+</div>
