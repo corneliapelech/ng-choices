@@ -10,7 +10,6 @@ import { StatsComponent } from './stats/stats.component';
 import { HomeComponent } from './home/home.component';
 import { GameComponent, QuitGame } from './game/game.component';
 import { StatsService } from './services/stats.service';
-import { DummyButtonsComponent } from './dummy-buttons/dummy-buttons.component';
 import { GameOverComponent } from './game-over/game-over.component';
 import { FooterComponent } from './footer/footer.component';
 import { ActionCardComponent } from './action-card/action-card.component';
@@ -18,7 +17,7 @@ import { ActionCardService } from './services/action-card.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, NgbModule, AppRoutingModule ],
-  declarations: [ AppComponent, StatsComponent, HomeComponent, GameComponent, QuitGame, DummyButtonsComponent, GameOverComponent, FooterComponent, ActionCardComponent ],
+  declarations: [ AppComponent, StatsComponent, HomeComponent, GameComponent, QuitGame, GameOverComponent, FooterComponent, ActionCardComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ StatsService, ActionCardService ],
   entryComponents: [QuitGame]
