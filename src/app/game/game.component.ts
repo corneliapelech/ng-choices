@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Subscription }   from 'rxjs';
 
 import { StatsService } from '../services/stats.service';
 
@@ -25,17 +26,29 @@ export class QuitGame {
   templateUrl: './game.component.html'
 })
 export class GameComponent implements OnInit, OnDestroy {
+  subscription: Subscription;
 
-  constructor(public statsService: StatsService, private modalService: NgbModal) { }
+  constructor(public statsService: StatsService, private modalService: NgbModal) {
+    this.subscription = statsService.gameStateChange.subscribe((value) => { 
+      if (value === false) {
+        this.setStats();
+      }
+    });
+  }
 
   ngOnInit() {
-    this.statsService.money = 5;
-    this.statsService.reputation = 5;
-    this.statsService.conscience = 5;
+    this.setStats();
   }
 
   ngOnDestroy() {
+    this.subscription.unsubscribe();
     this.statsService.updateGameState(false);
+  }
+
+  setStats() {
+    this.statsService.money = 5;
+    this.statsService.reputation = 5;
+    this.statsService.conscience = 5;
   }
 
   quit() {
