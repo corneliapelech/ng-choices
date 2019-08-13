@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import cards from "../assets/data/cards.json";
+import cards from "../../assets/data/cards.json";
 
 export interface IActionCard {
-  id: string;
   title: string;
   situation: string;
   choices: string;
