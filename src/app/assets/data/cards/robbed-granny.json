@@ -1,0 +1,19 @@
+{
+  "title": "Robbed granny",
+  "situation": "Walking down the street, you see an old lady in big trouble. A guy wearing a mask rips the lady's bag from her shoulder and starts running into your direction. The old lady is screaming, \"Stop this thief!\"",
+  "choices": "Do you quickly take a turn and hide - you don't wanna risk you health over someone's handbag - or do you trip the thief up to stop him?",
+  "answerA": "take a turn",
+  "answerB": "make him trip",
+  "conclusionA": {
+    "money": "0",
+    "reputation": "-1",
+    "conscience": "-2",
+    "outcome": "Thank god the thief didn't follow you! You got away without any trouble, although you do start to feel a bit bad about the old lady ..."
+  },
+  "conclusionB": {
+    "money": "-1",
+    "reputation": "2",
+    "conscience": "0",
+    "outcome": "Although the thief got a good hit on you, you only suffered from a mild concussion; you still had to be treated at the hospital and pay the bill, though. Turns out, the old lady was the mother of local newspaper's CEO and he was so very glad she was saved, he printed your story the following day."
+  }
+}

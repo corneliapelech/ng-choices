@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { Observable } from 'rxjs';
 
 import cards from "../assets/data/cards.json";
 
@@ -25,14 +28,18 @@ export interface IConclusion {
 
 export class ActionCardService {
 
-  cards: IActionCard[] = [];
+  cards: string[] = [];
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.cards = cards.cards;
   }
 
   getCard(): IActionCard {
-    return this.cards[Math.floor(Math.random()*this.cards.length)];
+    const link: string = '/assets/data/cards/' + this.cards[Math.floor(Math.random()*this.cards.length)] + '.json';
+    console.log(link);
+    const card$ = this.http.get<IActionCard>(link);
+    card$.subscribe(console.log);
+    return null;
   }
 
 }
