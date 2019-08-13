@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
@@ -16,7 +17,7 @@ import { ActionCardComponent } from './action-card/action-card.component';
 import { ActionCardService } from './services/action-card.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, NgbModule, AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule, NgbModule, AppRoutingModule, HttpClientModule ],
   declarations: [ AppComponent, StatsComponent, HomeComponent, GameComponent, QuitGame, GameOverComponent, FooterComponent, ActionCardComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ StatsService, ActionCardService ],

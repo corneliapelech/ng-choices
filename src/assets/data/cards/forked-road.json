@@ -1,0 +1,19 @@
+{
+  "title": "a fork in the road",
+  "situation": "You're out for a walk in the nearby park and you've reached the fork.",
+  "choices": "Since the park's layout is symmetrical there is no difference in the scenery. Which path do you choose today?",
+  "answerA": "Go left",
+  "answerB": "Go right",
+  "conclusionA": {
+    "money": "1",
+    "reputation": "0",
+    "conscience": "1",
+    "outcome": "Cool, you found a penny on the way!"
+  },
+  "conclusionB":{
+    "money": "0",
+    "reputation": "0",
+    "conscience": "-1",
+    "outcome": "Usually you choose this way and as usual nothing happened. You start to wonder if you miss out a lot and if you should break some habbits every now and then."
+  }
+}

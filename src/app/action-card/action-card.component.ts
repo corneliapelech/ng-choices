@@ -9,7 +9,8 @@ import { StatsService } from '../services/stats.service'
   styleUrls: ['./action-card.component.scss']
 })
 export class ActionCardComponent implements OnInit {
-  card: IActionCard;
+  card: IActionCard = null;
+  hide: boolean = true;
   outcome: string;
 
   constructor(private cardService: ActionCardService, private statsService: StatsService) { }
@@ -20,15 +21,20 @@ export class ActionCardComponent implements OnInit {
   }
 
   loadCard() {
-    this.card = this.cardService.getCard();
+    this.cardService.getCard().subscribe((card: IActionCard) => {
+      this.card = card;
+      this.hide = false;
+    });
   }
 
   chooseA() {
     this.resolveChoice(this.card.conclusionA);
+    this.hide = true;
   }
 
   chooseB() {
     this.resolveChoice(this.card.conclusionB);
+    this.hide = true;
   }
 
   private resolveChoice(conclusion: IConclusion) {
