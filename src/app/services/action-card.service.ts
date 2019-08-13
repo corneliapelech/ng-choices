@@ -37,7 +37,7 @@ export class ActionCardService {
   getCard(): IActionCard {
     const link: string = '/assets/data/cards/' + this.cards[Math.floor(Math.random()*this.cards.length)] + '.json';
     console.log(link);
-    const card$ = this.http.get<IActionCard>(link);
+    const card$:Observable<IActionCard> = <Observable<IActionCard>> this.http.get(link);
     card$.subscribe(console.log);
     return null;
   }
