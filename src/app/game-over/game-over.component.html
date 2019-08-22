@@ -1,40 +1,50 @@
 <div class="my-5">
   <h1 class="text-center">{{"Game over" | uppercase }}</h1>
 </div>
-<div class="d-flex flex-column my-5">
+<div class="row my-5 justify-content-center">
+  <div class="row col-11 justify-content-center col-md-8 col-lg-8">
   <!--<img src="{{imgSrc}}" class="card-img-top" alt="{{altText}}" />-->
   <!-- MONEY -->
-    <div *ngIf="money < 0" class="alert alert-danger">
-      <p class="text-center m-0">You're broke. You gotta move in with your mommy now..</p>
-    </div>
-    <div *ngIf="money === 0" class="alert alert-dark bg-dark">
-      <p class="text-center m-0">Well, at least you were able to manage your finances well.</p>
-    </div>
-    <div *ngIf="money > 0" class="alert alert-danger">
-      <p class="text-center m-0">Wow, look at how rich you got! Too bad you couldn't keep that a secret and fell victim to a crime.</p>
+    <div class="row col-12">
+      <div *ngIf="money < 0" class="alert alert-danger col-12">
+        <p class="text-center m-0">You're broke. You gotta move in with your mommy now..</p>
+      </div>
+      <div *ngIf="money === 0" class="alert alert-dark bg-dark col-12">
+        <p class="text-center m-0">Well, at least you were able to manage your finances well.</p>
+      </div>
+      <div *ngIf="money > 0" class="alert alert-danger col-12">
+        <p class="text-center m-0">Wow, look at how rich you got! Too bad you couldn't keep that a secret and fell victim to a crime.</p>
+      </div>
     </div>
   <!-- REPUTATION -->
-    <div *ngIf="reputation < 0" class="alert alert-danger">
-      <p class="text-center m-0">You're being ghosted. Holy moley, you really don't know how to behave around people, do you?</p>
-    </div>
-    <div *ngIf="reputation === 0" class="alert alert-dark bg-dark">
-      <p class="text-center m-0">Nice, you managed to keep your social life in balance.</p>
-    </div>
-    <div *ngIf="reputation > 0" class="alert alert-danger">
-      <p class="text-center m-0">Woooow, you're a people-person! Too bad they tore you appart because no one wanted to share you.</p>
+    <div class="row col-12">
+      <div *ngIf="reputation < 0" class="alert alert-danger col-12">
+        <p class="text-center m-0">You're being ghosted. Holy moley, you really don't know how to behave around people, do you?</p>
+      </div>
+      <div *ngIf="reputation === 0" class="alert alert-dark bg-dark col-12">
+        <p class="text-center m-0">Nice, you managed to keep your social life in balance.</p>
+      </div>
+      <div *ngIf="reputation > 0" class="alert alert-danger col-12">
+        <p class="text-center m-0">Woooow, you're a people-person! Too bad they tore you appart because no one wanted to share you.</p>
+      </div>
     </div>
   <!-- CONSCIENCE -->
-    <div *ngIf="conscience < 0" class="alert alert-danger">
-      <p class="text-center m-0">You fought with bravery to ignore your conscience, too bad it caught up on you at the end..</p>
+    <div class="row col-12">
+      <div *ngIf="conscience < 0" class="alert alert-danger col-12">
+        <p class="text-center m-0">You fought with bravery to ignore your conscience, too bad it caught up on you at the end..</p>
+      </div>
+      <div *ngIf="conscience === 0" class="alert alert-dark bg-dark col-12">
+        <p class="text-center m-0">No regrets. At least you were always happy with your decision.</p>
+      </div>
+      <div *ngIf="conscience > 0" class="alert alert-danger col-12">
+        <p class="text-center m-0">Who would've known that one explodes from being too happy. What a mess!</p>
+      </div>
     </div>
-    <div *ngIf="conscience === 0" class="alert alert-dark bg-dark">
-      <p class="text-center m-0">No regrets. At least you were always happy with your decision.</p>
-    </div>
-    <div *ngIf="conscience > 0" class="alert alert-danger">
-      <p class="text-center m-0">Who would've known that one explodes from being too happy. What a mess!</p>
-    </div>
+  </div>
 </div>
-<div class="d-flex align-items-start justify-content-between mt-4 mb-5 col-12">
-  <button type="button" class="btn btn-info col-5" (click)="restart()">Rewind the clock</button>
-  <button type="button" class="btn btn-secondary col-5" routerLink="/home">I accept my fate</button>
+<div class="row my-5 justify-content-center">
+  <div class="row justify-content-between mt-4 mb-5 col-11 col-md-8 col-lg-6">
+    <button type="button" class="btn btn-info col-5" (click)="restart()">Rewind the clock</button>
+    <button type="button" class="btn btn-secondary col-5" routerLink="/home">I accept my fate</button>
+  </div>
 </div>
