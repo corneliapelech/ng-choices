@@ -17,7 +17,7 @@ export class ActionCardComponent implements OnInit {
 
   ngOnInit() {
     this.loadCard();
-    this.outcome = "Intro text?";
+    this.outcome = "Greetings! Try to keep your stats in balance while handling weird situations and making hard decisions.";
   }
 
   loadCard() {

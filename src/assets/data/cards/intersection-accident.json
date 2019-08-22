@@ -1,0 +1,19 @@
+{
+  "title": "intersection accident",
+  "situation": "You're waiting at the intersection for the traffic light to turn green, deeply lost in thoughts. Suddelny you hear a load squeaking noise. Before you can react you get hit by a car. Instead of pulling over, the driver speeds down the road to disappear.",
+  "choices": "Do you try to get a good look to remember the license plate before you call the police and risk to worsen your injuries?",
+  "answerA": "Of course, he must pay!",
+  "answerB": "No, maybe a witness did.",
+  "conclusionA": {
+    "money": "2",
+    "reputation": "0",
+    "conscience": "-1",
+    "outcome": "Since you remembered the license plate they find the guy and you sue him. Your injuries got a lot worse though since you had to drag yourself around the corner of the intersection. The healing process is slow and painful, so you're not sure if it was worth it."
+  },
+  "conclusionB":{
+    "money": "0",
+    "reputation": "0",
+    "conscience": "0",
+    "outcome": "Unfortunately the police wasn't able to find the driver, but your hospital bill is covered by your insurance. You're back to normal in no time."
+  }
+}

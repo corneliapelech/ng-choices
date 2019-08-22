@@ -1,0 +1,19 @@
+{
+  "title": "a lost wallet",
+  "situation": "On your way home from a night out with your friends you stumble upon a wallet lying in the roadside ditch. No other person to be seen.",
+  "choices": "Do you pick it up and take it to the lost and found or do you take out the money and leave it there?",
+  "answerA": "Return it",
+  "answerB": "Take the money",
+  "conclusionA": {
+    "money": "0",
+    "reputation": "1",
+    "conscience": "2",
+    "outcome": "The real owner is greatful. You feel good about yourself!"
+  },
+  "conclusionB":{
+    "money": "3",
+    "reputation": "0",
+    "conscience": "-1",
+    "outcome": "There was a bunch of cash in it, but you feel a bit bad about the poor owner."
+  }
+}

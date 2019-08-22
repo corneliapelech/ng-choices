@@ -1,0 +1,19 @@
+{
+  "title": "",
+  "situation": "",
+  "choices": "",
+  "answerA": "",
+  "answerB": "",
+  "conclusionA": {
+    "money": "0",
+    "reputation": "0",
+    "conscience": "0",
+    "outcome": ""
+  },
+  "conclusionB":{
+    "money": "0",
+    "reputation": "0",
+    "conscience": "0",
+    "outcome": ""
+  }
+}
